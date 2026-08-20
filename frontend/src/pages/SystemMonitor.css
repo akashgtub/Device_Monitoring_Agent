@@ -1,0 +1,47 @@
+.graphs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.graph-card {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.graph-wrapper {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+
+.monitor-table {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.monitor-table th {
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--color-surface-secondary);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.monitor-table td {
+  padding: var(--space-3) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.875rem;
+}
+
+.monitor-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  .graphs-grid {
+    grid-template-columns: 1fr;
+  }
+}
