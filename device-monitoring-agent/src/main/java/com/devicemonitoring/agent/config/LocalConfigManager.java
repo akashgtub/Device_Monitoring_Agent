@@ -19,8 +19,8 @@ public class LocalConfigManager {
     private LocalAgentConfig config;
     private final Path configPath;
 
-    public LocalConfigManager(ObjectMapper objectMapper) {
-        this.objectMapper = objectMapper;
+    public LocalConfigManager() {
+        this.objectMapper = new ObjectMapper();
         String userHome = System.getProperty("user.home");
         this.configPath = Paths.get(userHome, ".devicemonitor", "agent-config.json");
     }

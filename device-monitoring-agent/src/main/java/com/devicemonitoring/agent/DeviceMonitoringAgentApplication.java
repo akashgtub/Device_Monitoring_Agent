@@ -12,4 +12,9 @@ public class DeviceMonitoringAgentApplication {
 		SpringApplication.run(DeviceMonitoringAgentApplication.class, args);
 	}
 
+	@org.springframework.context.annotation.Bean
+	public org.springframework.web.reactive.function.client.WebClient.Builder webClientBuilder() {
+		return org.springframework.web.reactive.function.client.WebClient.builder();
+	}
+
 }
